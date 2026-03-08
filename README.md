@@ -1,13 +1,13 @@
-# MachinGood → freee人事労務 PoC
+# MG → xxxxx人事労務 PoC
 
 ## 概要
 
-MachinGood（MG）の従業員・勤怠データを freee人事労務 API 経由で連携する
+MGの従業員・勤怠データを xxxxxx人事労務 API 経由で連携する
 Proof of Concept（概念実証）です。
 
 ```
 ┌─────────────┐     ┌──────────────────┐     ┌─────────────────┐
-│ MachinGood  │ ──→ │  変換レイヤー     │ ──→ │ freee人事労務    │
+│  MG         │ ──→ │  変換レイヤー     │ ──→ │ xxxxxx人事労務    │
 │ (ダミーJSON) │     │  (Python scripts) │     │ (テスト事業所)   │
 └─────────────┘     └──────────────────┘     └─────────────────┘
 ```
@@ -17,7 +17,7 @@ Proof of Concept（概念実証）です。
 ## ファイル構成
 
 ```
-mg-freee-poc/
+mg-xxxxxx-poc/
 ├── README.md                    ← このファイル
 ├── config.py                    ← ★ 自分の認証情報を入力
 ├── mg_dummy_data.json           ← MGダミーデータ（従業員5名 + 勤怠1ヶ月）
@@ -60,7 +60,7 @@ mg-freee-poc/
 ### 前提条件
 
 - Python 3.8以上
-- freee 開発者アカウント + テスト事業所 + テストアプリ 作成済み
+- xxxxxx 開発者アカウント + テスト事業所 + テストアプリ 作成済み
   （https://developer.freee.co.jp/startguide 参照）
 - アクセストークン取得済み
 - company_id（事業所ID）取得済み
@@ -81,7 +81,7 @@ ACCESS_TOKEN  = "あなたのアクセストークン"
 COMPANY_ID    = 1234567  # 数値で入力
 ```
 
-### 3. freee Web画面での事前設定（重要）
+### 3. xxxxxx Web画面での事前設定（重要）
 
 テスト事業所で以下が設定済みか確認:
 
@@ -137,9 +137,9 @@ python step3_verify.py
 
 → API経由で月次サマリを取得し、出勤日数・残業時間等を表示
 
-### Step 4: freee Web画面で給与計算
+### Step 4: xxxxxxx Web画面で給与計算
 
-1. freee人事労務にログイン
+1. xxxxx人事労務にログイン
 2. [給与明細] タブ → 2025年2月を選択
 3. [給与計算を実行] をクリック
 4. 各従業員の給与明細を確認
@@ -160,7 +160,7 @@ python step3_verify.py
 ```
 "締め日支払い日を選択してください"
 ```
-→ freee Web画面 → 設定 → 締め日支払い日 で設定を確認
+→ xxxxxx Web画面 → 設定 → 締め日支払い日 で設定を確認
 
 ### 権限エラー
 
