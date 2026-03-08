@@ -26,6 +26,7 @@ mg-freee-poc/
 ├── step3_verify.py              ← Step 3: 投入結果の確認
 └── employee_mapping.json        ← (自動生成) MG ID → freee ID の対応表
 ```
+※ config.pyとmd_dummy_data.jsonはこのレポジトリにはありません（to 関係者様、別途送付します）
 
 ---
 
