@@ -1,0 +1,8 @@
+# 認証情報が含まれるファイルを無視
+config.py
+employee_mapping.json
+
+# 仮想環境フォルダを無視
+.venv/
+__pycache__/
+*.pyc
